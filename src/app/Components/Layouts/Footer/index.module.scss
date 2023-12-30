@@ -1,0 +1,15 @@
+.wrapper {
+    font-family: var(--font-mono);
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 30px;
+}
+
+.wrapper a {
+    text-decoration: none;
+    color: var(--light-slate);
+}
+
+.wrapper a:hover {
+    color: var(--blue);
+}

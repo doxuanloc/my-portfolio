@@ -1,0 +1,132 @@
+.wrapper-header {
+    padding: 0 50px 0 50px;
+    background-color: var(--dark-navy);
+    display: flex;
+    align-items: center;
+    font-family: var(--font-mono);
+    position: fixed;
+    top:0;
+    width: 1350px;
+    transform: translateY(0px);
+    transition: 0.7s;
+
+}
+.wrapper-header-hide {
+    padding: 0 50px 0 50px;
+    background-color: var(--dark-navy);
+    display: flex;
+    align-items: center;
+    font-family: var(--font-mono);
+    position: fixed;
+    top: 0;
+    width: 1350px;
+    transform: translateY(-200px);
+    transition: 0.7s;
+    opacity: 0;
+}
+
+.wrapper-header img {
+    width: 50px;
+    border: 1px solid var(--blue);
+    border-radius: 8px;
+    margin-right: 80px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+
+.wrapper-header nav {
+    margin-right: 20px;
+}
+
+.wrapper-header a {
+    text-decoration: none;
+    margin-left: 30px;
+    color: var(--lightest-slate);
+}
+
+.wrapper-header a:hover {
+    color: var(--pink);
+}
+
+.nav {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav span {
+    color: var(--blue);
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    padding-left: 50px;
+}
+
+.social::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: var(--light-slate);
+}
+
+.social a {
+    color: var(--lightest-slate);
+    font-size: 30px;
+    padding-bottom: 15px;
+}
+
+.social a:hover {
+    transform: translateY(-5px) ;
+    transition: 0.3s;
+    color: var(--blue);
+}
+
+.gmail {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.gmail h4 {
+    position: fixed;
+    bottom: 0;
+    right: -45px;
+    text-decoration: none;
+    color: var(--light-slate);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.gmail h4:hover {
+    color: var(--pink);
+}
+
+.gmail h4 {
+    transform: rotate(90deg);
+    margin-bottom: 240px;
+    letter-spacing: 4px;
+    margin-right: 0px;
+}
+
+.gmail::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: var(--light-slate);
+    bottom: 0;
+    right: 0;
+    margin-right: 80px;
+}

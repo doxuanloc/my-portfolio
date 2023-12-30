@@ -1,0 +1,381 @@
+.wrapper {
+    padding: 100px 200px;
+    font-family: var(--font-mono);
+}
+
+.skills {
+    width: 110%;
+    display: flex;
+    overflow-y: hidden;
+    margin-left: -120px;
+    overflow-x: scroll;
+}
+
+.info {
+    padding-left: 40px;
+    padding-bottom: 200px;
+}
+
+.wrapper h1 {
+    color: var(--lightest-slate);
+}
+
+.info h1 {
+    color: var(--light-slate);
+    font-size: 80px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    letter-spacing: -0.2rem;
+}
+
+.info h2 {
+    color: var(--light-slate);
+    margin-bottom: 5px;
+}
+
+.info h3 {
+    color: var(--lightest-slate);
+    font-size: 60px;
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+
+.info p {
+    color: var(--lightest-slate);
+    margin-top: 20px;
+}
+
+.info Button {
+    margin-top: 30px;
+    margin-left: 0;
+    width: 200px;
+    height: 60px;
+    font-size: 18px;
+}
+
+
+.info Button h4 {
+    margin-top: 0;
+    padding: 5px;
+}
+
+.info Button:hover {
+     color: var(--pink);
+}
+
+.about {
+    padding-top: 50px;
+    padding-left: 70px;
+    padding-bottom: 120px;
+    height: 600px;
+}
+
+.title-about {
+    display: flex;
+    align-items: center;
+}
+
+.title-about::after {
+        content: "";
+        display: block;
+        position: relative;
+        top: 0px;
+        width: 300px;
+        height: 1.5px;
+        margin-left: 20px;
+        background-color: var(--lightest-navy);
+        box-sizing: inherit;
+}
+
+.about h1 {
+    color: var(--lightest-slate);
+}
+
+.experience {
+    padding-top: 150px;
+    padding-bottom: 200px;
+    padding-left: 100px;
+}
+
+.experience h1 {
+    color: var(--lightest-slate);
+}
+
+.content p {
+    color: var(--light-slate);
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content img {
+    width: 400px;
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+span {
+    color: var(--blue);
+    cursor: pointer;       
+}
+
+.span:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--pink);
+}
+
+.tech {
+    color: var(--lightest-slate);
+    font-weight: 100;
+    font-size: 15px;
+    letter-spacing: 0.01rem;
+}
+
+.tech ul {
+    list-style-image: url(../../logo.svg);
+    -moz-column-count: 2;
+    -moz-column-gap: 10px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 10px;
+    column-count: 2;
+    column-gap: 10px;
+    width: 600px;
+}
+
+
+
+.content-about p {
+    width: 500px;
+}
+
+.content-about {
+    display: flex;
+}
+
+.title-experience {
+    display: flex;
+    align-items: center;
+}
+
+.title-experience::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: 0px;
+    width: 300px;
+    height: 1.5px;
+    margin-left: 20px;
+    background-color: var(--lightest-navy);
+    box-sizing: inherit;
+}
+
+.title-work {
+    display: flex;
+    align-items: center;
+}
+
+.title-work::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: 0px;
+    width: 300px;
+    height: 1.5px;
+    margin-left: 20px;
+    background-color: var(--lightest-navy);
+    box-sizing: inherit;
+}
+
+.title-contact {
+    display: flex;
+    align-items: center;
+}
+
+.title-contact::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: 0px;
+    width: 300px;
+    height: 1.5px;
+    margin-left: 20px;
+    background-color: var(--lightest-navy);
+    box-sizing: inherit;
+}
+
+.content-experience button{
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    position: relative;
+    transition: var(--transition);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 170px;
+    height: var(--tab-height);
+    padding: 0px 20px 2px;
+    border-left: 2px solid var(--blue);
+    background-color: transparent;
+    color: var(--slate);
+    font-size: var(--fz-xs);
+    text-align: left;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 0px;
+    border-radius: 0px;
+}
+
+.content-experience button span {
+    font-size: 15px;
+    font-weight: 100;
+}
+
+
+.content-experience .active-btn span {
+    color: var(--blue);
+}
+
+.content-experience .non-active-btn span {
+    color: var(--slate);
+}
+
+.content-experience .active-btn::after{
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 1.5px;
+    height: var(--tab-height);
+    border-radius: var(--border-radius);
+    background: var(--blue);
+    transform: translateY(calc(0 * var(--tab-height)));
+    transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}
+
+.content-experience .non-active-btn::after {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 1px;
+    height: var(--tab-height);
+    border-radius: var(--border-radius);
+    background: var(--slate);
+    transform: translateY(calc(0 * var(--tab-height)));
+    transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}
+
+
+.content-experience .non-active-btn:hover{
+    color: var(--blue);
+    outline: 0px;
+    background-color: var(--light-navy);
+}
+
+.content-experience p{
+    padding-left: 20px;
+    margin-top: 10px;
+    width: 400px;
+    font-size: 15px;
+}
+
+.content-experience {
+    display: flex;
+}
+
+.detail {
+    padding-top: 5px;
+    margin-left: 20px;
+    font-family: var(--font-sans);
+    font-weight: 200;
+    font-size: 16px;
+    width: 500px;
+}
+
+.detail a {
+    text-decoration: none;  
+}
+
+
+
+.detail h2 {
+    color: var(--blue);
+    font-size: 14px;
+    font-family: var(--font-mono);
+}
+
+.detail p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 0;
+    color: var(--light-slate);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.detail ul li {
+    font-size: 16px;
+    padding-bottom: 10px;
+    list-style: none;
+}
+
+.detail ul h4::before {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    content: "▹";
+    position: absolute;
+    left: 500px;
+    color: var(--blue);
+    z-index: 999;
+}
+
+.detail h4 {
+    font-weight: 200;
+}
+
+
+.work {
+    padding-top: 50px; 
+    padding-bottom: 100px;
+}
+
+.contact {
+    padding-top: 100px;
+    padding-bottom: 200px;
+    text-align: center;
+}
+
+.contact Button {
+    margin-top: 30px;
+}
+
+.contact h3 {
+    padding-left: 150px;
+    color: var(--light-slate);
+    font-weight: 100;
+    width: 800px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.card {
+    display: flex;
+}
+
+.card img {
+    width: 400px;
+}
+
+.infoMe {
+    display: flex;
+    padding-top: 20px;
+    padding-left: 100px;
+}

@@ -1,0 +1,155 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
+
+.frame {
+    position: relative;
+    left: 80%;
+    width: 400px;
+    height: 400px;
+    border-radius: 2px;
+    box-shadow: 3px 3px 10px 3px rgba(227, 224, 224, 0.3);
+    overflow: hidden;
+    color: #3F3F3F;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+    border: none;
+    padding-bottom: 10px;
+    background-color: transparent;
+}
+
+.map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #365d7e;
+
+    svg {
+        fill: var(--blue);
+    }
+}
+
+.marker {
+    position: absolute;
+    z-index: 5;
+    top: 151px;
+    left: 176px;
+    font-size: 0;
+    cursor: pointer;
+    transform: perspective(600px) rotateY(180deg);
+    opacity: 1;
+    transition: all .5s ease .4s;
+
+    svg {
+        fill: #FFCC30;
+        animation: hovering 1s ease-in-out infinite alternate;
+    }
+}
+
+.inactive {
+    transform: rotateY(90deg);
+    transition: all .5s ease;
+
+    svg {
+        fill: #FFCC30;
+        animation: hovering 1s ease-in-out infinite alternate;
+    }
+}
+
+.shadow {
+    z-index: 10;
+    width: 18px;
+    height: 4px;
+    background: #1B7AC7;
+    border-radius: 50%;
+    margin: 5px auto 0 auto;
+    animation: shadow 1s ease-in-out infinite alternate;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+    left: 48%;
+}
+
+.cardMap {
+    position: absolute;
+    z-index: 10;
+    width: 240px;
+    height: 200px;
+    top: 105px;
+    left: 80px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 4px 8px 12px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform: perspective(600px) rotateY(360deg);
+    opacity: 1;
+    pointer-events: none;
+    transition: all .5s ease;
+    opacity: 0;
+
+    img {
+        margin-bottom: 18px;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 17px;
+        margin: 2px 0;
+
+        .name {
+            font-size: 14px;
+            line-height: 19px;
+            font-weight: 600;
+        }
+
+    }
+
+    .actions {
+        width: 50%;
+        height: 40px;
+        color: #4e9ad7;
+        cursor: pointer;
+        border-right: 1px solid #4e9ad7;;
+
+    }
+
+    .divide {
+        width: 50%;
+        color: #507897;
+        cursor: pointer;
+    }
+
+}
+
+.cardMapActive {
+    transform: perspective(600px) rotateY(0deg);
+    opacity: 1;
+    transition-delay: 1s;
+    pointer-events: all;
+    transition: all .5s ease .4s;
+}
+
+@keyframes hovering {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, -5px, 0);
+    }
+}
+
+@keyframes shadow {
+    from {
+        transform: scale(1) translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: scale(1.25) translate3d(0, 0, 0);
+    }
+}
